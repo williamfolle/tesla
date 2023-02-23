@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/image-1.png);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  padding: 0 7%;
+  transition: background-image 1s;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 320px;
+  cursor: pointer;
+}
+
+nav ul {
+  flex: 1;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 18px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+.btn {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  margin-right: 7%;
+  border-radius: 50px;
+}
+
+.info {
+  width: 100%;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+}
+
+.info div {
+  margin: 0 20px;
+}
+
+.info div h2 {
+  font-size: 44px;
+  font-weight: 400;
+}
+
+.info .line {
+  flex: 1;
+  background: #fff;
+  height: 3px;
+}
+
+.menu-btn {
+  color: var(--primary);
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+}
+.menu li {
+  display: inline-block;
+  margin: 0 0.8em;
+  font-size: 1.1em;
+}
+/* ================= responsiviti====================== */
+
+@media screen and (max-width: 1200px) {
+  /* adicionar teste de menu */
+  /* menu teste */
+  .menu-btn {
+    position: absolute;
+    color: #fff;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    z-index: 10;
+  }
+
+  .nav {
+    width: 100%;
+    height: 100%;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    background-color: rgba(30, 30, 30, 0.92);
+  }
+
+  .menu li {
+    display: block;
+    margin: 1.5em;
+    padding: 0 4em;
+  }
+
+  .menu.show {
+    transform: translateX(0);
+  }
+
+  .logo {
+    width: 40%;
+    cursor: pointer;
+    margin-top: 5%;
+  }
+
+  .info {
+    display: block;
+    align-items: center;
+    line-height: 3rem;
+  }
+
+  .info div h2 {
+    font-size: 34px;
+    font-weight: 400;
+  }
+}
